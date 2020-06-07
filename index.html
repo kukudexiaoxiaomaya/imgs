@@ -1,13 +1,13 @@
 <!-- 
 四合一图床上传，支持百度(2M)、搜狗(2M)、360(2M)、新浪(10M)图片上传
-声明：前端无版权，5G云源码分享网调用YoungxjApis接口
+声明：前端无版权，由whatzapi调用
 -->
 <!DOCTYPE html>
 <html lang='zh-cn'>
 <head>
 	<meta charset='UTF-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>四合一图床上传 - Cdn图床,百度图床,新浪图床,360图床,搜狗图床</title>
+	<title>某真图床</title>
 
 	<link rel='stylesheet' href='https://cdn.bootcss.com/normalize/5.0.0/normalize.min.css'>
 	<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
@@ -39,7 +39,7 @@
 		<div id='hero-img'>
 		</div>
 		<div id='profile-img'>
-			<img src='https://ww2.sinaimg.cn/large/005BYqpggy1fxbboztih4j305k05kwef.jpg' id="imgLoading" class="Rotation img" title="显示与隐藏"/>
+			<img src='https://images.weserv.nl/?url=https://ww2.sinaimg.cn/large/005BYqpggy1fxbboztih4j305k05kwef.jpg' id="imgLoading" class="Rotation img" title="显示与隐藏"/>
 		</div>
 		<div id='content'>
 			<h2>四合一图床上传</h2>
@@ -69,7 +69,7 @@
 
 		</div>
 	</div>
-</body><!-- 闲鱼资源网：精品资源分享网www.xianyuboke.com -->
+</body>
 <script type="text/javascript">
 /**
  * @act      sina
@@ -120,7 +120,7 @@
  	}else if(parseInt(fileSize) >= parseInt(maxSize)){  
  		parent.alert('上传的文件不能超过'+maxSize/1024/1024+'MB');return false;  
  	}else{
- 		$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpgly1fxbbemsqxaj305k05k3yg.jpg');
+ 		$('#imgLoading').attr('src','https://images.weserv.nl/?url=https://ww2.sinaimg.cn/large/005BYqpgly1fxbbemsqxaj305k05k3yg.jpg');
  		var data = new FormData($('#form1')[0]);  
  		var YoungxjApisToken = 'f07b711396f9a05bc7129c4507fb65c5';
  		switch(type){
@@ -165,12 +165,12 @@
  				$('#Imgs_html').val('<img src="'+imgSrc+'"/>');
  				$('#Imgs_Ubb').val('[img]'+imgSrc+'[/img]');
  				$('#Imgs_markdown').val('![]('+imgSrc+')');
- 				$('#images').html(img);$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpggy1fxbbgt35opj305k05k3yh.jpg');
+ 				$('#images').html(img);$('#imgLoading').attr('src','https://images.weserv.nl/?url=https://ww2.sinaimg.cn/large/005BYqpggy1fxbbgt35opj305k05k3yh.jpg');
  				$('#imgurl').show();
  				$('#progress').hide();  
  			}else{
  				$('#progress').hide();
- 				$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpggy1fxbbey7nfuj305k05k3yg.jpg');
+ 				$('#imgLoading').attr('src','https://images.weserv.nl/?url=https://ww2.sinaimg.cn/large/005BYqpggy1fxbbey7nfuj305k05k3yg.jpg');
  				parent.alert(ret['msg']);
  			}  
  			
